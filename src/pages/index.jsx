@@ -4,7 +4,8 @@ import Article from "../components/Article.jsx";
 import Search from "../components/search.jsx";
 
 function Homepage() {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([postsData]);
+    const [totalPosts, setTotalPosts] = useState(0);
 
     const onSearchChange = (value) => {
         console.log(value)
@@ -12,11 +13,12 @@ function Homepage() {
             item.title.includes(value)
     );
         setPosts(filteredPosts)
+        setTotalPosts(filteredPosts.length);
     };
     return (
         <>
         <h1>Simple Blog</h1>
-        <Search onSearchChange={onSearchChange}></Search>
+        <Search onSearchChange={onSearchChange} totalPosts={totalPosts}></Search>
         {posts.map((props, index) => (
 <Article {...props} key={index}></Article>
             ))}

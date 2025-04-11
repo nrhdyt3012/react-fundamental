@@ -1,12 +1,11 @@
 function Article (props) {
-    
+    const tags = props.tags || [];
 
-    //infos.map(item=> item)
-    return(
+    return (
         <>
-        <h3>{props.title}</h3>
-        <small>Date : {props.date}, tags: {props.tags.join(",")}</small>
+            <h3>{props.title}</h3>
+            <small>Date : {props.date}, tags: {tags.join(", ")}</small>
         </>
-    )
+    );
 }
 export default Article;
