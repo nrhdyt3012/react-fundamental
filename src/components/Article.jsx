@@ -1,16 +1,13 @@
-export default function Article () {
-    const name = "Dwi Nurhidayat"
-    const infos = ["Laki-laki", "30 Desember 2004", "Mahasiswa","Bangka Belitung"]
+function Article (props) {
+    
 
     //infos.map(item=> item)
     return(
         <>
-        <div>{name}</div>
-        <div>
-            {infos.map((info) => {
-                return <div>{info}</div>
-            })}
-        </div>
+        <h3>{props.title}</h3>
+        <small>Date : {props.date}, tags: {props.tags.join(",")}</small>
+    
         </>
     )
 }
+export default Article;

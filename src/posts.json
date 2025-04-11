@@ -1,0 +1,17 @@
+[
+    {
+        "title":"Tutorial masak",
+        "tags": ["mie", "air"],
+        "date":"2024-02-01"
+    },
+    {
+        "title":"Tutorial jahit",
+        "tags": ["baju", "celana"],
+        "date":"2024-02-01"
+    },
+    {
+        "title":"Tutorial berenang",
+        "tags": ["bebas", "batu"],
+        "date":"2024-02-01"
+    }
+]
