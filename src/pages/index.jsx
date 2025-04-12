@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import postsData from "../posts.json";
 import Article from "../components/Article.jsx";
 import Search from "../components/Search.jsx";
@@ -21,6 +21,9 @@ function Homepage() {
         .then((response) => response.json())
         .then((json) => setExternalPosts(json));
         },[])
+    useEffect(() => {
+        console.log("Pencarian baru")
+    }, [posts])
     return (
         <>
         <h1>Simple Blog</h1>
