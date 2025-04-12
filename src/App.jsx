@@ -1,7 +1,8 @@
 import './App.css'
 import Article from './components/Article.jsx'
-import Homepage from './pages/index.jsx';
 import { GlobalContext } from './context/index.js';
+import { router } from './routers/index.jsx';
+import { RouterProvider } from 'react-router-dom';
 function App() {
   const user = {
     username : 'Dayat'
@@ -9,8 +10,8 @@ function App() {
   return (
     <div>
       <GlobalContext.Provider value={user}>
-      <Homepage></Homepage>
-      </GlobalContext.Provider>
+<RouterProvider router={router}/>      
+</GlobalContext.Provider>
     </div>
   )
 }
