@@ -1,4 +1,4 @@
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, } from "react";
 import postsData from "../posts.json";
 import Article from "../components/Article.jsx";
 import Search from "../components/Search.jsx";
@@ -15,28 +15,14 @@ function Homepage() {
         setPosts(filteredPosts)
         setTotalPosts(filteredPosts.length);
     };
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((response) => response.json())
-        .then((json) => setExternalPosts(json));
-        },[])
-    useEffect(() => {
-        console.log("Pencarian baru")
-    }, [posts])
+    
     return (
         <>
         <h1>Simple Blog</h1>
         <Search onSearchChange={onSearchChange} totalPosts={totalPosts}></Search>
         {posts.map((props, index) => (
 <Article {...props} key={index}></Article>
-            ))}
-            <hr />
-            <h2>External Posts</h2>
-            {externalPosts.map((item,index) => (
-                <div key={index}>*{item.title}</div>
-            )
-        )}
+            ))}            
         </>
     )
 }

@@ -3,6 +3,7 @@ import RootLayout from "../layouts/RootLayout";
 
 import Homepage from "../pages";
 import About from "../pages/About";
+import Blog from "../pages/blogs";
 
 
 export const router = createBrowserRouter ([
@@ -13,6 +14,10 @@ export const router = createBrowserRouter ([
             {
                 path:"/",
                 element :<Homepage></Homepage>
+            },
+            {
+                path:"/blog",
+                element :<Blog></Blog>
             },
             {
                 path:"/about",
