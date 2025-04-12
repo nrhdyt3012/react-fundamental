@@ -2,16 +2,19 @@
     {
         "title":"Tutorial masak",
         "tags": ["mie", "air"],
-        "date":"2024-02-01"
+        "date":"2024-02-01",
+        "isNew": true
     },
     {
         "title":"Tutorial jahit",
         "tags": ["baju", "celana"],
-        "date":"2024-02-01"
+        "date":"2024-02-01",
+        "isNew":false
     },
     {
         "title":"Tutorial berenang",
         "tags": ["bebas", "batu"],
-        "date":"2024-02-01"
+        "date":"2024-02-01",
+        "isNew":true
     }
 ]
