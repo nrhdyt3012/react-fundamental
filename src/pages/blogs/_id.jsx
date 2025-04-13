@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 
 function SinglePost () {
-    const params = useParams();
-    const [posts, setPosts] = useState('')
-
-    useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
-        .then((response) => response.json())
-        .then((json) => setPosts(json));
-        },[]);
-
+    const post = useLoaderData();
         return (
             <>
-            <h2>{posts?.title}</h2>
-            <div>{posts?.body}</div>
+            <h2>{post?.title}</h2>
+            <div>{post?.body}</div>
             </>
         )
     }
